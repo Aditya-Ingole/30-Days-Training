@@ -1,0 +1,64 @@
+# Build results
+bin/
+obj/
+
+# Visual Studio files
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider / VS Code
+.idea/
+.vscode/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# .NET specific
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# ASP.NET / IIS
+wwwroot/lib/
+wwwroot/dist/
+
+# User-specific files
+*.rsuser
+
+# NuGet
+*.nupkg
+packages/
+!packages/build/
+
+# Environment variables / secrets
+appsettings.Development.json
+appsettings.Local.json
+.env
+
+# Publish output
+publish/
+*.pubxml
+*.publishproj
+
+# Azure / deployment
+*.azurePubxml
+
+# Resharper
+_ReSharper*/
+*.DotSettings.user
+
+# Test results
+TestResults/
+*.trx
+
+# Coverage reports
+coverage/
+*.coverage
+*.coveragexml

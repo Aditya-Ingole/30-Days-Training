@@ -1,0 +1,136 @@
+.login-page {
+
+  height: 100vh;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #667eea,
+      #764ba2);
+}
+
+.login-card {
+
+  width: 420px;
+
+  background: white;
+
+  padding: 40px;
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,.15);
+}
+
+h1 {
+
+  text-align: center;
+
+  margin-bottom: 10px;
+}
+
+.subtitle {
+
+  text-align: center;
+
+  color: gray;
+
+  margin-bottom: 25px;
+}
+
+.form-group {
+
+  display: flex;
+
+  flex-direction: column;
+
+  margin-bottom: 20px;
+}
+
+label {
+
+  margin-bottom: 8px;
+
+  font-weight: 600;
+}
+
+input {
+
+  padding: 12px;
+
+  border: 1px solid #ddd;
+
+  border-radius: 8px;
+}
+
+.login-btn {
+
+  width: 100%;
+
+  padding: 12px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #667eea;
+
+  color: white;
+
+  cursor: pointer;
+}
+
+.register-section {
+
+  margin-top: 20px;
+
+  text-align: center;
+}
+
+.register-section a {
+
+  color: #667eea;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  margin-left: 5px;
+}
+
+.backend-error {
+  background: #ffe5e5;
+  color: #b00020;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.error {
+  color: #dc3545;
+  font-size: 12px;
+  margin-top: 5px;
+  display: block;
+}
+
+.login-btn:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+}
+
+input.ng-invalid.ng-touched {
+  border: 1px solid #dc3545;
+}
+
+input.ng-valid.ng-touched {
+  border: 1px solid #28a745;
+}

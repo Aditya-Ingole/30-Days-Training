@@ -1,0 +1,124 @@
+<div class="products-page">
+
+    <div class="page-header">
+
+        <h1>Products</h1>
+
+    </div>
+
+    @if(isAdmin())
+    {
+
+    <div class="create-product-card">
+
+        <h2>Create Product</h2>
+
+        <form [formGroup]="productForm" (ngSubmit)="createProduct()">
+
+            <input type="text" placeholder="Product Name" formControlName="name">
+
+            <input type="text" placeholder="Description" formControlName="description">
+
+            <input type="number" placeholder="Price" formControlName="price">
+
+            @if(isEditMode)
+            {
+
+            <button type="button" (click)="updateProduct()">
+
+                Update Product
+
+            </button>
+
+            }
+            @else
+            {
+
+            <button type="submit">
+
+                Create Product
+
+            </button>
+
+            }
+        </form>
+
+    </div>
+
+    }
+
+    @if(isLoading)
+    {
+
+    <div class="loading">
+
+        Loading Products...
+
+    </div>
+
+    }
+    @else
+    {
+
+    @if(products.length === 0)
+    {
+
+    <div class="empty-state">
+
+        No Products Found
+
+    </div>
+
+    }
+    @else
+    {
+
+    <div class="product-grid">
+
+        @for(
+        product of products;
+        track product.id
+        )
+        {
+
+        <div class="product-card">
+
+            <h3>
+                {{ product.name }}
+            </h3>
+
+            <p>
+                {{ product.description }}
+            </p>
+
+            <h4>
+                ₹ {{ product.price }}
+            </h4>
+
+            @if(isAdmin())
+            {
+
+            <button class="edit-btn" (click)="editProduct(product)">
+
+                Edit
+
+            </button>
+
+            <button class="delete-btn" (click)="deleteProduct(product.id)">
+
+                Delete
+
+            </button>
+
+            }
+
+        </div>
+        }
+
+    </div>
+
+    }
+
+    }
+
+</div>

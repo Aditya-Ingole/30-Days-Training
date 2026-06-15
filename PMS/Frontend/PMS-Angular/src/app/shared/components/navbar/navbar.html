@@ -1,0 +1,56 @@
+<nav class="navbar">
+
+  <h2>PMS</h2>
+
+  <div class="nav-links">
+
+    @if(isLoggedIn())
+    {
+
+      <a routerLink="/dashboard">
+
+        Dashboard
+
+      </a>
+
+      <a routerLink="/products">
+
+        Products
+
+      </a>
+
+      <span class="user-role">
+
+        {{currentUser?.role}}
+
+      </span>
+
+      <a
+        class="logout-link"
+        (click)="logout()">
+
+        Logout
+
+      </a>
+
+    }
+    @else
+    {
+
+      <a routerLink="/login">
+
+        Login
+
+      </a>
+
+      <a routerLink="/register">
+
+        Register
+
+      </a>
+
+    }
+
+  </div>
+
+</nav>
